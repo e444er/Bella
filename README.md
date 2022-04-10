@@ -22,4 +22,4 @@ Kotlin Flow, ConstraintLayout, Data-Binding, Navigation Graph etc.
 
 ## Screenshots
 
-<img src="https://github.com/e444er/Bella/blob/master/app/src/main/res/drawable-v24/ic_man.png" width="200" /> <img src="https://github.com/e444er/Bella/blob/master/app/src/main/res/drawable/ww.png" width="200" /> <img src="https://github.com/e444er/Bella/blob/master/app/src/main/res/drawable/w.png" width="200" /> 
+<img src="https://github.com/e444er/Bella/blob/master/app/src/main/res/drawable-v24/ic_man.png" /> <img src="https://github.com/e444er/Bella/blob/master/app/src/main/res/drawable/ww.png" width="200" /> <img src="https://github.com/e444er/Bella/blob/master/app/src/main/res/drawable/w.png" width="200" /> 
