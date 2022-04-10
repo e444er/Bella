@@ -3,7 +3,7 @@
 # Bella Ciao
 
 Sample application to demonstrate Multi-module Clean MVVM Architecture and usage of Android Hilt,
-Kotlin Flow, ConstraintLayout, Data-Binding, Navigation Graph etc.
+Kotlin Flow, ConstraintLayout, View-Binding, Navigation Graph etc.
 
 ## Overview
 
