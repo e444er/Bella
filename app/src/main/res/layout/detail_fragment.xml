@@ -5,6 +5,7 @@
     android:id="@+id/view_header"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#273442"
     tools:context=".detail_fragment.DetailFragment">
 
     <ImageView
@@ -18,20 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_man" />
 
-    <ImageView
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="?actionBarSize"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        android:contentDescription="goback"
-        android:focusable="true"
-        android:padding="8dp"
-        android:src="@drawable/ic_arrow_forward"
-        app:layout_constraintBottom_toTopOf="@id/view_contents"
-        app:layout_constraintEnd_toStartOf="@id/tv_header_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/btn_fav"
@@ -52,17 +40,16 @@
         android:id="@+id/tv_header_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:maxLines="1"
         android:gravity="center"
-        android:text="name"
+        android:maxLines="1"
+        android:text="@string/app_name"
         android:textAppearance="?attr/textAppearanceHeadline6"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@id/btn_fav"
-        app:layout_constraintStart_toEndOf="@id/btn_back"
-        app:layout_constraintTop_toTopOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/app_name" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -72,14 +59,17 @@
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_back">
+        app:layout_constraintTop_toBottomOf="@+id/tv_header_title">
 
         <ImageView
             android:id="@+id/profPic"
             android:layout_width="250dp"
             android:layout_height="250dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
             app:layout_collapseMode="parallax"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +106,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="label_name"
+            android:text="Name"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@id/tv_name"
@@ -143,7 +133,7 @@
             android:id="@+id/tv_occupation_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="label_occupation"
+            android:text="Occupation"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@id/tv_occupation"
@@ -170,7 +160,7 @@
             android:id="@+id/tv_gender_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="label_gender"
+            android:text="Gender"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@id/tv_status"
@@ -198,7 +188,7 @@
             android:id="@+id/tv_status_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="label_status"
+            android:text="Status"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@id/tv_romance"
@@ -226,7 +216,7 @@
             android:id="@+id/tv_romance_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="label_romance"
+            android:text="Romance"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@id/tv_family"
@@ -254,7 +244,7 @@
             android:id="@+id/tv_family_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="label_family"
+            android:text="Family"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@id/tv_first_appearance"
@@ -282,7 +272,7 @@
             android:id="@+id/tv_first_appearance_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="label_first_appearance"
+            android:text="First Appearance"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@id/tv_last_appearance"
@@ -310,7 +300,7 @@
             android:id="@+id/tv_last_appearance_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="label_last_appearance"
+            android:text="Last Appearance"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@id/tv_played_by"
@@ -338,7 +328,7 @@
             android:id="@+id/tv_played_by_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="label_played_by"
+            android:text="Played by"
             android:textAppearance="?attr/textAppearanceSubtitle2"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@id/tv_played_by"

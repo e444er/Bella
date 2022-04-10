@@ -33,13 +33,15 @@ class MainFragment : Fragment(R.layout.main_fragment) {
                 if (bellaList.isLoading) {
                     binding.rvQuestions.isVisible = false
                     binding.tvHeaderTitle.isVisible = false
+                    binding.progressBar.isVisible = true
                 }
                 if (bellaList.error.isNotBlank()) {
                     binding.rvQuestions.isVisible = false
                     binding.tvHeaderTitle.isVisible = false
+                    binding.progressBar.isVisible = true
                 }
                 bellaList.data?.let {
-
+                    binding.progressBar.isVisible = false
                     binding.rvQuestions.isVisible = true
                     binding.tvHeaderTitle.isVisible = true
                     _adapter?.differ?.submitList(it.toMutableList())

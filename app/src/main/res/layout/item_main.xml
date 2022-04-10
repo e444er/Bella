@@ -10,6 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view_star"
+        android:background="#273442"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
